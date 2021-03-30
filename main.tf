@@ -21,7 +21,7 @@ module "subnet_config" {
   for_each = var.node_pool_subnets
 
   subnet_info  = each.value
-  principal_id = local.aks_identity_id
+  principal_id = local.aks_identity_principal_id
 
   configure_network_role  = var.configure_network_role
   configure_nsg_rules     = var.configure_subnet_nsg_rules
