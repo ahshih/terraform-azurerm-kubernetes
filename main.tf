@@ -21,8 +21,7 @@ module "subnet_config" {
   for_each = var.node_pool_subnets
 
   subnet_info  = each.value
-  principal_id = (var.user_assigned_identity == null ? azurerm_user_assigned_identity.aks.0.principal_id :
-                  var.user_assigned_identity.principal_id)
+  principal_id = "blah"
 
   configure_network_role  = var.configure_network_role
   configure_nsg_rules     = var.configure_subnet_nsg_rules
